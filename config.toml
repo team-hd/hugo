@@ -159,15 +159,10 @@ theme = "teamhd"
 				["fa-instagram", "https://instagram.com/xciber"],
 			]
 
-#		[[params.team.members]]
-#			img = "default-avatar.png"
-#			name = "Карина Арустамова"
-#			position = "Тренер"
-#			social = [
-#				["fa-twitter", "#"],
-#				["fa-facebook", "#"],
-#				["fa-linkedin", "#"]
-#			]
+		[[params.team.members]]
+			img = "default-avatar.png"
+			name = "Anonimous"
+			position = "Идейный вдохновитель"
 
 	# Client section
 	# All the clients' logos are stored under 'static/img/logos'.

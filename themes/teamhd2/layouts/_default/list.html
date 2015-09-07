@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+        <!-- {{ partial "header.html" . }}  -->
+        {{ partial "nav.html" . }} 
+    <div class="wrapper container">
+        {{ partial "heading.html" . }}
+        <div class="row">
+            <!-- {{ partial "aside.html" . }} -->
+            <section class="col-md-24">
+                {{ partial "blockquote.html" . }}
+                <br/>
+                {{ range first 10 .Data.Pages }}
+                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                {{ end }}
+            </section>
+        </div>
+    </div>
+    {{ partial "footer.html" . }} 
+    {{ partial "js.html" . }}
+</body>
+
+</html>
