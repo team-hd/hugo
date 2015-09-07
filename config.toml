@@ -55,22 +55,31 @@ theme = "teamhd"
 	# Services section
 	[params.services]
 		title = "Услуги"
-		subtitle = "Lorem ipsum dolor sit amet consectetur."
+		subtitle = "У нас вы сможете получить"
 
 		[[params.services.list]]
 			icon = "fa-user"
 			title = "Тренерское сопровождение"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+			description = "Наши программы составляются индивидуально под каждого спортсмена."
+			link = "/services/coaching/"
 
 		[[params.services.list]]
 			icon = "fa-users"
-			title = "Организация мероприятий"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+			title = "Организация и проведение тренировочных сборов"
+			description = "Тренировочные сборы – это очная организация тренировочного процесса тренера и группы спортсменов для более эффективной реализации планов тренировок."
+			link = "/services/camp/"
+
+		[[params.services.list]]
+			icon = "fa-cutlery"
+			title = "Консультации по питанию"
+			description = "Тренировочный процесс в современном мире спорта, не возможно реализовать без соответствующего питания."
+			link = "/services/nutrition/"
 
 		[[params.services.list]]
 			icon = "fa-bicycle"
-			title = "Подготовка к стартам"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+			title = "Подбор инвентаря и экипировки"
+			description = "Наши специалисты, опираясь на Ваши индивидуальные особенности в строении тела и техники выполнения физических упражнений, профессионально подберут необходимую экипировку и инвентарь для занятий тем или иным видом спорта."
+			link = "/services/equipment/"
 
 
 	# Portfolio section

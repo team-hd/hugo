@@ -310,8 +310,8 @@ text-shadow: 0 1px 0 #ccc,
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
+        padding-top: 100px;
+        padding-bottom: 50px;
     }
 
     header .intro-text .intro-lead-in {
