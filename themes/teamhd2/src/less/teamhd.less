@@ -1,226 +1,313 @@
-@import "bootstrap/bootstrap.less";
-@import "variables.less";
-p {
-    margin: 20px 0;
+ @import "bootstrap/bootstrap.less";
+ @import "variables.less";
+ p {
+     // margin: 20px 0;
+ }
+ 
+ .form-control {
+     box-shadow: none;
+ }
+ 
+ .btn {
+     font-family: @brand-font;
+ }
+ 
+ .panel {
+     box-shadow: none;
+     .panel-heading {
+         font: 14px @brand-font;
+         text-transform: uppercase;
+         padding: 10px;
+     }
+     .panel-body {
+         padding: 10px;
+     }
+ }
+ 
+ body {
+     // background: url(../img/header-bg.jpg);
+     background: #F7F7F7;
+     border-top: 5px solid #7e7e7e;
+     figure {
+         background: @brand-primary;
+         /* Цвет фона */
+         padding: 5px;
+         /* Поля вокруг */
+         display: block;
+         /* Блочный элемент */
+         // width: 150px;
+         /* Ширина */
+         margin: 15px;
+         /* Отступы */
+         text-align: center;
+         /* Выравнивание по центру */
+     }
+     .figure-left {
+         float: left;
+     }
+     .figure-right {
+         float: right;
+     }
+     .navbar a {
+         font: 14px @brand-font;
+         text-transform: uppercase;
+     }
+     .wrapper {
+         padding: 0 0 50px 0;
+         max-width: 960px;
+         margin: auto;
+         background: white;
+         p {
+             text-align: justify;
+             margin: 20px;
+         }
+         .navbar a {
+             font: 14px @brand-font;
+             text-transform: uppercase;
+             margin: 0;
+             padding: 0;
+         }
+         .heading {
+             // background: transparent url(/img/header-bg.jpg);
+             background: @brand-primary;
+             border-radius: 20px;
+             height: 40px;
+             margin: 30px 0;
+             padding-left: 20px;
+             h1 {
+                 // background: url(../images/bg.png);
+                 // color: #7e7e7e;
+                 color: white;
+                 display: inline-block;
+                 font: normal 40px/40px @brand-font;
+                 margin: 0;
+                 padding: 0 10px;
+                 text-transform: uppercase;
+             }
+         }
+         .submenu {
+             margin-bottom: 30px;
+             li {
+                 display: list-item;
+                 font: 300 14px @brand-font;
+                 list-style-position: inside;
+                 list-style-type: square;
+                 padding: 10px;
+                 text-transform: uppercase;
+                 &.active {
+                     color: @brand-primary;
+                 }
+                 a {
+                     color: @text-color;
+                     text-decoration: none;
+                     &:hover {
+                         color: @text-color;
+                     }
+                 }
+             }
+         }
+         .jumbotron {
+             border-radius: 0;
+             padding: 0;
+             margin: 0;
+             blockquote {
+                 border-left: none;
+                 p {
+                     font: 300 italic 24px @brand-font;
+                     text-transform: uppercase;
+                     margin-bottom: 0;
+                 }
+                 small {
+                     text-align: right;
+                     color: #1D8EA6;
+                     font: 300 18px @brand-font;
+                     &:before {
+                         content: '';
+                     }
+                 }
+             }
+         }
+         h2 {
+             background: none repeat scroll 0 0 #29C5E6;
+             color: #fff;
+             font: 300 30px @brand-font;
+             padding: 0 10px;
+             text-transform: uppercase;
+         }
+         .team {
+             .row {
+                 margin-top: 20px;
+                 .col {
+                     white-space: nowrap;
+                     .thumbnail {
+                         margin-bottom: 5px;
+                     }
+                 }
+                 .col-md-offset-1 {
+                     margin-left: 3.7%;
+                 }
+                 .caption {
+                     h3 {
+                         font: 300 16px @brand-font;
+                         margin: 0;
+                     }
+                     p {
+                         font: 300 14px @brand-font;
+                         color: @brand-primary;
+                         margin: 0;
+                     }
+                 }
+             }
+         }
+     }
+     footer {
+         background: #7e7e7e;
+         color: #dbdbdb;
+         font-size: 11px;
+         line-height: 13px;
+         .container {
+             height: 110px;
+             padding: 10px 0;
+             margin: auto;
+             h3 {
+                 border-bottom: 1px solid #919191;
+                 color: #ffffff;
+                 font-size: 14px;
+                 line-height: 21px;
+                 font-family: @brand-font;
+                 margin: 0 0 10px;
+                 text-transform: uppercase;
+             }
+             p {
+                 margin: 5px 0;
+             }
+             .twitter {
+                 p {
+                     padding-right: 15px;
+                 }
+                 time a {
+                     color: #b4aeae;
+                     text-decoration: underline;
+                 }
+             }
+             a {
+                 color: #dbdbdb;
+             }
+             .sitemap a {
+                 display: block;
+                 font-size: 12px;
+                 margin-bottom: 5px;
+             }
+             .social {
+                 font-size: 14pt;
+             }
+             .footer-logo {
+                 float: right;
+                 margin-top: 20px;
+                 font-size: 10px;
+                 text-align: right;
+                 a {
+                     text-decoration: underline;
+                 }
+             }
+         }
+     }
+ }
+ 
+ @media (min-width: 768px) {
+     .navbar .navbar-nav {
+         display: inline-block;
+         float: none;
+         vertical-align: top;
+     }
+     .navbar .navbar-collapse {
+         text-align: center;
+     }
+ }
+ /*
+Navbar "hovernav" dropdown menu - this works only for screen sizes larger than phones.
+The Bootstrap CSS is unchanged.
+*/
+ 
+ @media (min-width: 768px) {
+     /* Use this if you wish to hide the caret
+  .navbar-nav .caret {
+    display: none;
+  } 
+  */
+     .navbar-nav .open ul {
+         display: none
+     }
+     .navbar-default .navbar-nav > .open > a,
+     .navbar-default .navbar-nav > .open > a:hover,
+     .navbar-default .navbar-nav > .open > a:focus {
+         color: #555;
+         background: none
+     }
+     .navbar-default .navbar-nav > li:hover {
+         background: #e7e7e7
+     }
+     .navbar-inverse .navbar-nav > .open > a,
+     .navbar-inverse .navbar-nav > .open > a:hover,
+     .navbar-inverse .navbar-nav > .open > a:focus {
+         color: #969696;
+         background: none
+     }
+     .navbar-inverse .navbar-nav > li:hover {
+         background: #080808
+     }
+     .navbar-nav .hovernav:hover > .dropdown-menu {
+         display: block;
+     }
+ }
+
+header {
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url(../img/header-bg.jpg);
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
-.form-control {
-    box-shadow: none;
+header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
-.btn {
-    font-family: @brand-font;
+header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
 }
 
-.panel {
-    box-shadow: none;
-    .panel-heading {
-        font: 14px @brand-font;
-        text-transform: uppercase;
-        padding: 10px;
-    }
-    .panel-body {
-        padding: 10px;
-    }
+header .intro-text .intro-heading {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
 }
 
-body {
-    background-image: url(../images/bg.png);
-    border-top: 5px solid #7e7e7e;
-    .navbar a {
-        font: 14px @brand-font;
-        text-transform: uppercase;
-    }
-    .wrapper {
-        padding: 0 0 50px 0;
-        max-width: 960px;
-        margin: auto;
-        header {
-            padding: 20px 0;
-            .form-search {
-                width: 200px;
-            }
-        }
-        .navbar a {
-            font: 14px @brand-font;
-            text-transform: uppercase;
-        }
-        .heading {
-            background: transparent url(../images/h1-bg.png);
-            height: 40px;
-            margin: 30px 0;
-            padding-left: 20px;
-            h1 {
-                background: url(../images/bg.png);
-                color: #7e7e7e;
-                display: inline-block;
-                font: normal 40px/40px @brand-font;
-                margin: 0;
-                padding: 0 10px;
-                text-transform: uppercase;
-            }
-        }
-        .submenu {
-            margin-bottom: 30px;
-            li {
-                display: list-item;
-                font: 300 14px @brand-font;
-                list-style-position: inside;
-                list-style-type: square;
-                padding: 10px;
-                text-transform: uppercase;
-                &.active {
-                    color: @brand-primary;
-                }
-                a {
-                    color: @text-color;
-                    text-decoration: none;
-                    &:hover {
-                        color: @text-color;
-                    }
-                }
-            }
-        }
-        .jumbotron {
-            border-radius: 0;
-            padding: 0;
-            margin: 0;
-            blockquote {
-                border-left: none;
-                p {
-                    font: 300 italic 33px @brand-font;
-                    text-transform: uppercase;
-                    margin-bottom: 0;
-                }
-                small {
-                    text-align: right;
-                    color: #1D8EA6;
-                    font: 300 20px @brand-font;
-                    &:before {
-                        content: '';
-                    }
-                }
-            }
-        }
-        h2 {
-            background: none repeat scroll 0 0 #29C5E6;
-            color: #fff;
-            font: 300 30px @brand-font;
-            padding: 0 10px;
-            text-transform: uppercase;
-        }
-        .team {
-            .row {
-                margin-top: 20px;
-                .col {
-                    white-space: nowrap;
-                    .thumbnail {
-                        margin-bottom: 5px;
-                    }
-                }
-                .col-md-offset-1 {
-                    margin-left: 3.7%;
-                }
-                .caption {
-                    h3 {
-                        font: 300 16px @brand-font;
-                        margin: 0;
-                    }
-                    p {
-                        font: 300 14px @brand-font;
-                        color: @brand-primary;
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    }
-    footer {
-        background: #7e7e7e;
-        color: #dbdbdb;
-        font-size: 11px;
-        line-height: 13px;
-        .container {
-            height: 110px;
-            padding: 10px 0;
-            h3 {
-                border-bottom: 1px solid #919191;
-                color: #ffffff;
-                font-size: 14px;
-                line-height: 21px;
-                font-family: @brand-font;
-                margin: 0 0 10px;
-                text-transform: uppercase;
-            }
-            p {
-                margin: 5px 0;
-            }
-            .twitter {
-                p {
-                    padding-right: 15px;
-                }
-                time a {
-                    color: #b4aeae;
-                    text-decoration: underline;
-                }
-            }
-            a {
-                color: #dbdbdb;
-            }
-            .sitemap a {
-                display: block;
-                font-size: 12px;
-                margin-bottom: 5px;
-            }
-            .social {
-                .social-icon {
-                    width: 30px;
-                    height: 30px;
-                    background: url(../images/social.png) no-repeat;
-                    display: inline-block;
-                    margin-right: 10px;
-                }
-                .social-icon-small {
-                    width: 16px;
-                    height: 16px;
-                    background: url(../images/social-small.png) no-repeat;
-                    display: inline-block;
-                    margin: 5px 6px 0 0;
-                }
-                .twitter {
-                    background-position: 0 0;
-                }
-                .facebook {
-                    background-position: -30px 0;
-                }
-                .google-plus {
-                    background-position: -60px 0;
-                }
-                .vimeo {
-                    background-position: 0 0;
-                }
-                .youtube {
-                    background-position: -16px 0;
-                }
-                .flickr {
-                    background-position: -32px 0;
-                }
-                .instagram {
-                    background-position: -48px 0;
-                }
-                .rss {
-                    background-position: -64px 0;
-                }
-            }
-            .footer-logo {
-                float: right;
-                margin-top: 20px;
-                font-size: 10px;
-                text-align: right;
-                a {
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-}
+
+

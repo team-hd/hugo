@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head.html" . }}
+    <title>Блог</title>
+</head>
+
+<body>
+    <!-- {{ partial "header.html" . }}  -->
+    {{ partial "nav.html" . }}
+         {{ partial "header.html" . }}
+   <div class="wrapper container">
+        <div class="heading">
+            <h1>Блог</h1>
+        </div>
+        <div class="row">
+            <section class="col-md-17">
+                {{ range first 10 .Data.Pages }}
+                    <h3><a href="{{ .Permalink }}"><i class="fa fa-asterisk"></i>{{ .Title }}</a></h3>
+                    {{ .Summary }} 
+                    {{ if .Truncated }}
+                        <div class="read-more-link">
+                            <a href="{{ .RelPermalink }}">Читать далее…</a>
+                        </div>
+                    {{ end }} 
+                {{ end }}
+            </section>
+            {{ partial "aside.html" . }}
+        </div>
+    </div>
+    {{ partial "footer.html" . }} {{ partial "js.html" . }}
+</body>
+
+</html>

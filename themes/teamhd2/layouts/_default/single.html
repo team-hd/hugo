@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-{{ partial "head.html" . }}
+<head>
+    {{ partial "head.html" . }}
+    <title>{{ .Title }}</title>
+</head>
 
 <body>
-        <!-- {{ partial "header.html" . }}  -->
-        {{ partial "nav.html" . }} 
-    <div class="wrapper container">
+    <!-- {{ partial "header.html" . }}  -->
+    {{ partial "nav.html" . }}
+         {{ partial "header.html" . }}
+   <div class="wrapper container">
         {{ partial "heading.html" . }}
         <div class="row">
-            <!-- {{ partial "aside.html" . }} -->
-            <section class="col-md-24">
-                {{ partial "blockquote.html" . }}
-                <br/>
+            <section class="col-md-17">
+                {{ with .Params.image }}
+                    <figure {{ with .align }} class="figure-{{ . }}" {{end}}>
+                        <img src="{{ .src }}">
+                    </figure>
+                {{ end }}
                 <p>{{ .Content }}</p>
             </section>
+            {{ partial "aside.html" . }}
         </div>
     </div>
-    {{ partial "footer.html" . }} 
+    {{ partial "footer.html" . }}
     {{ partial "js.html" . }}
 </body>
 

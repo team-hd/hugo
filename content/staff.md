@@ -1,6 +1,6 @@
 +++
-title = "О Нас"
-date = "2015-09-02T16:04:42+03:00"
+date = "2015-09-08T09:24:40+03:00"
+title = "Тренерский состав"
 +++
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head.html" . }}
+    <title>Услуги</title>
+</head>
+
+<body>
+    <!-- {{ partial "header.html" . }}  -->
+    {{ partial "nav.html" . }}
+        {{ partial "header.html" . }}
+    <div class="wrapper container">
+        <div class="heading">
+            <h1>Услуги</h1>
+        </div>
+        <div class="row">
+            <section class="col-md-17">
+                    <div class="row text-center">
+                        {{ range .Data.Pages }}
+                        <div class="col-md-12">
+                            <a href="{{ .Permalink }}"><span class="fa-stack fa-4x">
+                                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                            <i class="fa {{ .Params.icon }} fa-stack-1x fa-inverse"></i>
+                            </span>
+                    <h4>{{ .Title }}</h4></a>
+                        </div>
+                        {{ end }}
+                    </div>
+            </section>
+            {{ partial "aside.html" . }}
+        </div>
+    </div>
+    {{ partial "footer.html" . }} {{ partial "js.html" . }}
+</body>
+
+</html>

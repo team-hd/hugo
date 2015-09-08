@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-{{ partial "head.html" . }}
+
+<head>
+    {{ partial "head.html" . }}
+    <title>{{ .Title }}</title>
+</head>
 
 <body>
-        <!-- {{ partial "header.html" . }}  -->
-        {{ partial "nav.html" . }} 
+    <!-- {{ partial "header.html" . }}  -->
+    {{ partial "nav.html" . }}
+        {{ partial "header.html" . }}
     <div class="wrapper container">
         {{ partial "heading.html" . }}
         <div class="row">
-            <!-- {{ partial "aside.html" . }} -->
-            <section class="col-md-24">
-                {{ partial "blockquote.html" . }}
-                <br/>
+            <section class="col-md-17">
                 {{ range first 10 .Data.Pages }}
-                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                {{ end }}
+                <h3><a href="{{ .Permalink }}"><i class="fa fa-asterisk"></i> {{ .Title }}</a></h3> {{ .Summary }} {{ if .Truncated }}
+                <div class="read-more-link">
+                    <a href="{{ .RelPermalink }}">Read More…</a>
+                </div>
+                {{ end }} {{ end }}
             </section>
+            {{ partial "aside.html" . }}
         </div>
     </div>
-    {{ partial "footer.html" . }} 
-    {{ partial "js.html" . }}
+    {{ partial "footer.html" . }} {{ partial "js.html" . }}
 </body>
 
 </html>
