@@ -17,7 +17,7 @@
         <div class="row">
             <section class="col-md-17">
                     <div class="row text-center">
-                        {{ range .Data.Pages }}
+                        {{ range .Data.Pages.ByWeight }}
                         <div class="col-md-12">
                             <a href="{{ .Permalink }}"><span class="fa-stack fa-4x">
                                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
