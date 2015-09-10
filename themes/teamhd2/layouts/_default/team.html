@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+    <title>{{ .Title }}</title>
+</head>
+
+<body>
+    <!-- {{ partial "header.html" . }}  -->
+    {{ partial "nav.html" . }}
+         {{ partial "header.html" . }}
+   <div class="wrapper container">
+        {{ partial "heading.html" . }}
+        <div class="row">
+            <section class="col-md-17">
+                {{ with .Params.avatar }}<img src="{{ . }}" class="img-responsive img-thumbnail" alt="" align="left" style="width: 150px; height: auto; padding: 20px; margin:30px;">{{ end }}
+                <p>{{ .Content }}</p>
+            </section>
+            {{ partial "aside.html" . }}
+        </div>
+    </div>
+    {{ partial "footer.html" . }}
+    {{ partial "js.html" . }}
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+ @import "bootstrap/bootstrap.less";
+ @import "variables.less";
+ body {
+     .navbar {
+         margin-bottom: 0px;
+     }
+     .navbar a {
+         font: 14px;
+         text-transform: uppercase;
+     }
+     .wrapper {
+         margin-bottom: 20px;
+         .img-responsive {
+             margin: 0 auto;
+         }
+     }
+     footer {
+         font-size: 11px;
+         line-height: 13px;
+         position: fexed;
+         bottom: 0;
+         width: 100%;
+         background-color: #f5f5f5;
+         .container {
+             height: 110px;
+             padding: 10px 0;
+             margin: auto;
+             h3 {
+                 font-size: 14px;
+                 line-height: 21px;
+                 // font-family: @brand-font;
+                 margin: 0 0 10px;
+                 text-transform: uppercase;
+             }
+             p {
+                 margin: 5px 0;
+             }
+             .twitter {
+                 p {
+                     padding-right: 15px;
+                 }
+                 time a {
+                     color: #b4aeae;
+                     text-decoration: underline;
+                 }
+             }
+             a {
+                 // color: #dbdbdb;
+             }
+             .sitemap a {
+                 display: block;
+                 font-size: 12px;
+                 margin-bottom: 5px;
+             }
+             .social {
+                 font-size: 14pt;
+             }
+             .footer-logo {
+                 float: right;
+                 margin-top: 20px;
+                 font-size: 10px;
+                 text-align: right;
+                 a {
+                     text-decoration: underline;
+                 }
+             }
+         }
+     }
+ }
+ 
+ header {
+     text-align: center;
+     color: #fff;
+     background-attachment: scroll;
+     background-image: url(../img/header-bg.jpg);
+     background-position: center center;
+     background-repeat: none;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
+ }
+ 
+ header .intro-text {
+     padding-top: 100px;
+     padding-bottom: 50px;
+ }
+ 
+ header .intro-text .intro-lead-in {
+     margin-bottom: 25px;
+     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-size: 22px;
+     font-style: italic;
+     line-height: 22px;
+ }
+ 
+ header .intro-text .intro-heading {
+     margin-top: 0px;
+     margin-bottom: 25px;
+     text-transform: uppercase;
+     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-size: 50px;
+     font-weight: 700;
+     line-height: 50px;
+     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+ }
+ 
+ @media (min-width: 768px) {
+     /* Use this if you wish to hide the caret
+  .navbar-nav .caret {
+    display: none;
+  } 
+  */
+     .navbar-nav .open ul {
+         display: none
+     }
+     .navbar-default .navbar-nav > .open > a,
+     .navbar-default .navbar-nav > .open > a:hover,
+     .navbar-default .navbar-nav > .open > a:focus {
+         color: #555;
+         background: none
+     }
+     .navbar-default .navbar-nav > li:hover {
+         background: #e7e7e7
+     }
+     .navbar-inverse .navbar-nav > .open > a,
+     .navbar-inverse .navbar-nav > .open > a:hover,
+     .navbar-inverse .navbar-nav > .open > a:focus {
+         color: #969696;
+         background: none
+     }
+     .navbar-inverse .navbar-nav > li:hover {
+         background: #080808
+     }
+     .navbar-nav .hovernav:hover > .dropdown-menu {
+         display: block;
+     }
+     .navbar .navbar-collapse {
+         text-align: center;
+     }
+ }

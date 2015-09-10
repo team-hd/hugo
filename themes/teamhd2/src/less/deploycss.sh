@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/local/bin/lessc --verbose teamhd.less ../../static/css/teamhd.css
+/usr/local/bin/lessc --verbose $1 ../../static/css/teamhd.css
