@@ -14,9 +14,7 @@
         <div class="row">
             <section class="col-md-17">
                 {{ with .Params.image }}
-                    <figure {{ with .align }} class="figure-{{ . }}" {{end}}>
-                        <img src="{{ .src }}">
-                    </figure>
+                        <img src="{{ .src }}" class="img-responsive img-thumbnail" align="{{.align}}" style="margin: 15px; width: 250px; height: auto;">
                 {{ end }}
                 <p>{{ .Content }}</p>
             </section>

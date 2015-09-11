@@ -3,7 +3,7 @@
 
 <head>
     {{ partial "head.html" . }}
-    <title>Команда</title>
+    <title>Календарь мероприятий</title>
 </head>
 
 <body>
@@ -11,26 +11,20 @@
     {{ partial "nav.html" . }} {{ partial "header.html" . }}
     <div class="wrapper container">
         <div class="heading">
-            <h1>Команда</h1>
+            <h1>Календарь мероприятий</h1>
         </div>
         <div class="row">
             <section class="col-md-17">
                 <div class="row text-center">
-                    {{ range .Data.Pages.ByWeight }}
+                    {{ range where .Data.Pages.ByDate ".Params.tags" "=" "event" }}
                     <div class="col-md-12 text-center">
                         <a href="{{ .Permalink }}">
-                        {{ with .Params.avatar }}<img src="{{ . }}" class="img-responsive img-circle" alt="" align="center">{{ end }}</a>
+                        {{ with .Params.image }}<img src="{{ .src }}" class="img-responsive img-rounded" alt="" align="center" style="width: 250px; height: auto;">{{ end }}</a>
                         <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                         <p class="text-muted">{{ .Params.subtitle }}</p>
-                        <ul class="list-inline social-buttons">
-                            {{ range .Params.social }}
-                            <li><a href="{{ index . 1 }}"><i class="fa {{ index . 0 }}"></i></a></li>
-                            {{ end }}
-                        </ul>
                     </div>
                     {{ end }}
                 </div>
-                {{ partial "inprogress.html" . }}
             </section>
             {{ partial "aside.html" . }}
         </div>

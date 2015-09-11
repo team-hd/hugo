@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 {{ partial "head.html" . }}
+
 <body>
-        <!-- {{ partial "header.html" . }}  -->
-        {{ partial "nav.html" . }} 
-        {{ partial "header.html" . }}
+    <!-- {{ partial "header.html" . }}  -->
+    {{ partial "nav.html" . }} {{ partial "header.html" . }}
     <div class="wrapper container">
-        {{ partial "heading.html" . }}
+        <!-- {{ partial "heading.html" . }} -->
         <div class="row">
             <section class="col-md-17">
-                {{ partial "blockquote.html" . }}
-                <br/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                {{ partial "blockquote.html" . }} {{ range where .Data.Pages "Section" "=" "post" }}
+                <a href="{{ .Permalink }}">
+                    <h3><span class="fa-stack fa-2x">
+                                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #FFCC66;"></i>
+                                            <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+                            </span>
+                            {{ .Title }} <span style="font-size:xx-small; vertical-align:top;">({{ .Date.Format "2 Jan 2006" }})</span></h3></a>
+                {{ .Summary }} {{ if .Truncated }}
+                <div class="read-more-link">
+                    <a href="{{ .RelPermalink }}">Читать далее…</a>
+                </div>
+                {{ end }} {{ end }}
             </section>
             {{ partial "aside.html" . }}
         </div>
     </div>
-    {{ partial "footer.html" . }} 
-    {{ partial "js.html" . }}
+    {{ partial "footer.html" . }} {{ partial "js.html" . }}
 </body>
 
 </html>

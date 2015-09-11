@@ -5,6 +5,7 @@ subtitle = "Главный тренер"
 avatar = "/img/team/sheykin.jpg"
 weight = 1
 layout = "team"
+aliases = "/staff/triathlon/sheykin/"
 +++
 
 ### Главный тренер многофункционального спортивного клуба «Heavy Duty»

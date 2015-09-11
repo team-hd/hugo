@@ -20,13 +20,14 @@
                         {{ range .Data.Pages.ByWeight }}
                         <div class="col-md-12">
                             <a href="{{ .Permalink }}"><span class="fa-stack fa-4x">
-                                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #FFCC66;"></i>
                                             <i class="fa {{ .Params.icon }} fa-stack-1x fa-inverse"></i>
                             </span>
                     <h4>{{ .Title }}</h4></a>
                         </div>
                         {{ end }}
                     </div>
+                {{ partial "inprogress.html" . }}
             </section>
             {{ partial "aside.html" . }}
         </div>

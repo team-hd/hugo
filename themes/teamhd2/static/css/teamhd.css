@@ -7367,6 +7367,7 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  margin-bottom: 10px;
 }
 header .intro-text {
   padding-top: 100px;

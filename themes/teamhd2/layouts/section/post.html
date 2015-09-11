@@ -8,23 +8,26 @@
 
 <body>
     <!-- {{ partial "header.html" . }}  -->
-    {{ partial "nav.html" . }}
-         {{ partial "header.html" . }}
-   <div class="wrapper container">
+    {{ partial "nav.html" . }} {{ partial "header.html" . }}
+    <div class="wrapper container">
         <div class="heading">
             <h1>Блог</h1>
         </div>
         <div class="row">
             <section class="col-md-17">
                 {{ range first 10 .Data.Pages }}
-                    <h3><a href="{{ .Permalink }}"><i class="fa fa-asterisk"></i>{{ .Title }}</a></h3>
-                    {{ .Summary }} 
-                    {{ if .Truncated }}
-                        <div class="read-more-link">
-                            <a href="{{ .RelPermalink }}">Читать далее…</a>
-                        </div>
-                    {{ end }} 
-                {{ end }}
+                <a href="{{ .Permalink }}">
+                    <h3><span class="fa-stack fa-2x">
+                                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #FFCC66;"></i>
+                                            <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+                            </span>
+                            {{ .Title }} <span style="font-size:xx-small; vertical-align:top;">({{ .Date.Format "2 Jan 2006" }})</span></h3></a>
+
+                            {{ .Summary }} {{ if .Truncated }}
+                <div class="read-more-link">
+                    <a href="{{ .RelPermalink }}">Читать далее…</a>
+                </div>
+                {{ end }} {{ end }}
             </section>
             {{ partial "aside.html" . }}
         </div>
