@@ -9,7 +9,9 @@
         <!-- {{ partial "heading.html" . }} -->
         <div class="row">
             <section class="col-md-17">
-                {{ partial "blockquote.html" . }} {{ range where .Data.Pages "Section" "=" "post" }}
+                {{ partial "blockquote.html" . }} 
+                {{ partial "inprogress.html" . }}
+                {{ range where .Data.Pages "Section" "=" "post" }}
                 <a href="{{ .Permalink }}">
                     <h3><span class="fa-stack fa-2x">
                                             <i class="fa fa-circle fa-stack-2x text-primary" style="color: #FFCC66;"></i>
