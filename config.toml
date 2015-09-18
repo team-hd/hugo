@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "http://teamhd.kolesnichenko.com/"
+baseurl = "http://team-hd.ru/"
 languageCode = "ru"
 title = "#HeavyDuty Team"
 theme = "teamhd"
