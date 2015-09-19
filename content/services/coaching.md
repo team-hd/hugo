@@ -1,7 +1,5 @@
 +++
-categories = ["Услуги"]
 date = "2015-09-07T11:43:32+03:00"
-tags = ["Услуги"]
 title = "Тренерское сопровождение"
 icon = "fa-user"
 description = ""

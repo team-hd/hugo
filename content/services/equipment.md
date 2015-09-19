@@ -1,10 +1,7 @@
 +++
-categories = ["Услуги"]
 date = "2015-09-07T12:00:40+03:00"
-tags = ["Услуги"]
 title = "Подбор инвентаря и экипировки"
 icon = "fa-bicycle"
-description = ""
 weight = 4
 [image]
     src = "/img/venom_ceepo.jpg"

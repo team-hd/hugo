@@ -1,9 +1,7 @@
 +++
-categories = ["services"]
 date = "2015-09-07T10:51:58+03:00"
 title = "Консультации по питанию"
 icon = "fa-cutlery"
-description = ""
 weight = 3
 +++
 
