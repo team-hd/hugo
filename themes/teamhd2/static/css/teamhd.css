@@ -7310,6 +7310,9 @@ body .wrapper {
 body .wrapper .img-responsive {
   margin: 0 auto;
 }
+body .alert {
+  display: inline-block;
+}
 body footer {
   font-size: 11px;
   line-height: 13px;

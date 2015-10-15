@@ -10,7 +10,7 @@
         <div class="row">
             <section class="col-md-17">
                 {{ partial "blockquote.html" . }} 
-                {{ partial "inprogress.html" . }}
+                <!-- {{ partial "inprogress.html" . }} -->
                 {{ range where .Data.Pages "Section" "=" "post" }}
                 <a href="{{ .Permalink }}">
                     <h3><span class="fa-stack fa-2x">
