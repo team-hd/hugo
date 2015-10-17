@@ -13,9 +13,9 @@
         {{ partial "heading.html" . }}
         <div class="row">
             <section class="col-md-17">
-                {{ with .Params.image }}
+                {{ with .Params.banner }}
                         <figure>
-                            <img src="{{ .src }}" width="100%" >
+                            <img src="{{ . }}" width="100%" >
                         </figure>
                 {{ end }}
                 <p>{{ .Content }}</p>

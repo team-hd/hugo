@@ -1,0 +1,7 @@
+<div class="mdl-card__media" {{if .Params.banner}}style="background-image: url('{{.Params.banner}}');"{{end}}>
+	<h3 style="text-shadow: 0 1px 0 #cccccc;"><a href="{{ .Permalink }}">{{.Title}} (<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2 Jan 2006" }}</time>)</a></h3>
+</div>
+<div class="mdl-card__supporting-text">
+	{{ if .Description }}{{ .Description }}{{else}}{{.Summary}}{{end}}
+</div>
+<hr/>

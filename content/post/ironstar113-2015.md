@@ -1,10 +1,7 @@
 +++
 title = "5:32:32 на Ironstar 113 / 2015"
-description = "Впечатления Сергея Мурзилина от старта Ironstar 113/2015."
 date = "2015-10-05"
-[image]
-    src = "/img/murs-ironstar113-2015-run.jpg"
-    align = "right"
+banner = "/img/murs-ironstar113-2015-run.jpg"
 +++
 
 Получилось так – **«Как работал, так и  заработал!»**,  или как там говорится))

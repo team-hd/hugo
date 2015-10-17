@@ -9,20 +9,16 @@
         <!-- {{ partial "heading.html" . }} -->
         <div class="row">
             <section class="col-md-17">
-                {{ partial "blockquote.html" . }} 
-                <!-- {{ partial "inprogress.html" . }} -->
-                {{ range where .Data.Pages "Section" "=" "post" }}
-                <a href="{{ .Permalink }}">
-                    <h3><span class="fa-stack fa-2x">
-                                            <i class="fa fa-circle fa-stack-2x text-primary" style="color: #FFCC66;"></i>
-                                            <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-                            </span>
-                            {{ .Title }} <span style="font-size:xx-small; vertical-align:top;">({{ .Date.Format "2 Jan 2006" }})</span></h3></a>
-                {{ .Summary }} {{ if .Truncated }}
-                <div class="read-more-link">
-                    <a href="{{ .RelPermalink }}">Читать далее…</a>
-                </div>
-                {{ end }} {{ end }}
+                {{ partial "blockquote.html" . }}
+                    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }} {{ range $index, $page := $paginator.Pages }} {{if and (eq $paginator.PageNumber 1) (eq $index 0)}}
+                    <div class="mdl-card mdl-cell first-post mdl-cell--8-col">
+                        {{ .Render "li" }}
+                    </div>
+                    {{ partial "author-box.html" . }} {{else}}
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        {{ .Render "li" }}
+                    </div>
+                    {{end}} {{ end }} {{ partial "pagination.html" $paginator }}
             </section>
             {{ partial "aside.html" . }}
         </div>

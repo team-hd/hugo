@@ -19,7 +19,7 @@
                     {{ range where .Data.Pages.ByDate ".Params.tags" "=" "event" }}
                     <div class="col-md-12 text-center">
                         <a href="{{ .Permalink }}">
-                        {{ with .Params.image }}<img src="{{ .src }}" class="img-responsive img-rounded" alt="" align="center" style="width: 250px; height: auto;">{{ end }}</a>
+                        {{ with .Params.banner }}<img src="{{ . }}" class="img-responsive img-rounded" alt="" align="center" style="width: 250px; height: auto;">{{ end }}</a>
                         <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                         <p class="text-muted">{{ .Params.subtitle }}</p>
                     </div>
